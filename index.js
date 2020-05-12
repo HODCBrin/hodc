@@ -22,7 +22,7 @@ client.on('message', message => {
 })
 client.on('message', message => {
     if(message.content.startsWith(`${prefix}twitch`)) {
-        message.channel.send("Hey" + displayName + "Follow our :twitch: twitch on twitch.tv/hodc") 
+        message.channel.send("Hey follow our :twitch: twitch on twitch.tv/hodc") 
     } 
 })
 client.login(process.env.token);
