@@ -28,7 +28,6 @@ client.on('message', message => {
 })
 client.on('message', message => {
     if(message.content.startsWith(`${prefix}group`))
-    let roleName = message.content.split(" ").slice(1).join(" ");
     let membersWithRole = message.guild.members.filter(member => {
         return member.roles.find("HODC", roleName);
     }).map(member => {
