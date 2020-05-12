@@ -21,9 +21,8 @@ client.on('message', message => {
     } 
 })
 client.on('message', message => {
-    new Discord.User(Client)
     if(message.content.startsWith(`${prefix}twitch`)) {
-        message.channel.send("Hey" + Client + "follow our " + ":twitch:" + " twitch on twitch.tv/hodc") 
+        message.channel.send("Hey" + client + "follow our " + ":twitch:" + " twitch on twitch.tv/hodc") 
     } 
 })
 client.login(process.env.token);
