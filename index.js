@@ -24,16 +24,14 @@ client.on('message', message => {
 
     if(message.content.startsWith(`${prefix}twitch`)) {
         message.channel.send("Hey " + message.author.username + ", follow <https://twitch.tv/hodc> for great streams!") 
-    } 
-})
-client.on('message', message => {
-    if(message.content.startsWith(`${prefix}group`)) {
-        const hodcEmbed = new Discord.MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle('The HODC group')
-        .addField(
-            { name: 'Members', value: 'Brin' + 'DeVisnetje' + 'DeGack' + 'ThatSpecOpsTrain' + 'T1M0K'}
-        )
-        
     }
-client.login(process.env.token);
+    })
+    client.on('message', message => {
+        if(message.content.startsWith(`${prefix}group`)) {
+            const hodcEmbed = new Discord.MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle('The HODC group')
+            .addField(
+                { name: 'Members', value: 'Brin' + 'DeVisnetje' + 'DeGack' + 'ThatSpecOpsTrain' + 'T1M0K'}
+            )}
+    client.login(process.env.token)});
