@@ -26,4 +26,20 @@ client.on('message', message => {
         message.channel.send("Hey " + message.author.username + ", follow <https://twitch.tv/hodc> for great streams!") 
     } 
 })
+client.on('message', message => {
+    if(message.content.startsWith(`${prefix}group`))
+    let roleName = message.content.split(" ").slice(1).join(" ");
+    let membersWithRole = message.guild.members.filter(member => {
+        return member.roles.find("HODC", roleName);
+    }).map(member => {
+        return member.user.username;
+    })
+
+    let embed = new Discord.RichEmbed({
+        "title": `Our team`,
+        "description": membersWithRole.join("HODC"),
+        "color": 0xFFFF
+    });
+    return message.channel.send({embed});
+} )
 client.login(process.env.token);
