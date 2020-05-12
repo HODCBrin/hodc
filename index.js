@@ -25,4 +25,4 @@ client.on('message', message => {
         message.channel.send("Follow our twitch on twitch.tv/hodc") 
     } 
 })
-client.login(token);
+client.login(process.env.token);
