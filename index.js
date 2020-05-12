@@ -28,11 +28,6 @@ client.on('message', message => {
 })
 client.on('message', message => {
     if(message.content.startsWith(`${prefix}group`))
-    let membersWithRole = message.guild.members.filter(member => {
-        return member.roles.find("HODC", roleName);
-    }).map(member => {
-        return member.user.username;
-    })
 
     let embed = new Discord.RichEmbed({
         "title": `Our team`,
