@@ -27,13 +27,13 @@ client.on('message', message => {
     } 
 })
 client.on('message', message => {
-    if(message.content.startsWith(`${prefix}group`))
-
-    let embed = new Discord.RichEmbed({
-        "title": `Our team`,
-        "description": membersWithRole.join("HODC"),
-        "color": 0xFFFF
-    });
-    return message.channel.send({embed});
-} )
+    if(message.content.startsWith(`${prefix}group`)) {
+        const hodcEmbed = new Discord.MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle('The HODC group')
+        .addField(
+            { name: 'Members', value: 'Brin' + 'DeVisnetje' + 'DeGack' + 'ThatSpecOpsTrain' + 'T1M0K'}
+        )
+        
+    }
 client.login(process.env.token);
