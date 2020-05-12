@@ -21,9 +21,9 @@ client.on('message', message => {
     } 
 })
 client.on('message', message => {
-    userID = message.member.displayname
+    let member = message.member.displayname
     if(message.content.startsWith(`${prefix}twitch`)) {
-        message.channel.send("Hey " + userID + ", follow https://twitch.tv/hodc for great streams!") 
+        message.channel.send("Hey " + member + ", follow <https://twitch.tv/hodc> for great streams!") 
     } 
 })
 client.login(process.env.token);
